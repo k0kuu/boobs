@@ -17,4 +17,4 @@ spec:
     createNamespace: true
   values:
     image:
-      tag: "initial"
+      tag: "e81977f8fc3779537812acc416c28629b063911a"
