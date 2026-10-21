@@ -1,0 +1,4 @@
+replicaCount: 1
+image:
+  repository: ghcr.io/k0kuu/version-app
+  tag: "initial"

@@ -1,0 +1,20 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: version-app
+  namespace: flux-system
+spec:
+  interval: 5m
+  releaseName: version-app
+  targetNamespace: version
+  chart:
+    spec:
+      chart: ./charts/version-app
+      sourceRef:
+        kind: GitRepository
+        name: flux-system
+  install:
+    createNamespace: true
+  values:
+    image:
+      tag: "initial"
