@@ -18,3 +18,8 @@ spec:
   values:
     image:
       tag: "8afe6d587ca7808abad85825cc95c71379182a0a"
+    hpa:
+      enabled: true
+      minReplicas: 1
+      maxReplicas: 5
+      targetCPU: 50

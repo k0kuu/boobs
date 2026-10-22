@@ -3,7 +3,9 @@ kind: Deployment
 metadata:
   name: version-app
 spec:
+  {{- if not .Values.hpa.enabled }}
   replicas: {{ .Values.replicaCount }}
+  {{- end }}
   selector:
     matchLabels:
       app: version-app
